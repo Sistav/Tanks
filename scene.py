@@ -3,7 +3,7 @@
 # Date        : June 16, 2022
 # Description : Manages gameplay, titlescreen, animations, and more.
 
-import pygame
+import pygame,os
 from bullet import *
 from player import *
 from wall import * 
@@ -41,7 +41,7 @@ class Scene:
             self.start_time = self.clock_cycle
         
         # Get the png from the file explorer and load it
-        photo = f"Frames\{self.current_frame}.png"
+        photo = f"{os.getcwd()}/Frames/{self.current_frame}.png"
         frame = pygame.image.load(photo)
 
         # Center the image on a rectangle the size of the window

@@ -6,6 +6,7 @@ import pygame
 from player import *
 from scene import *
 from wall import *
+import os
 
 # Pygame setup
 pygame.init()
@@ -45,7 +46,7 @@ clock_cycle = 0
 scene_manager = Scene(0)
 
 # Sets up the music and sets the volume to zero
-song = "Sound\music_loop.wav"
+song =  os.getcwd() + "/Sound/music_loop.wav"
 
 # Begins the mixer and loads the song
 pygame.mixer.init()
